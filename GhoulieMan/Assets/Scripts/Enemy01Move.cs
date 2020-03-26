@@ -20,16 +20,16 @@ public class Enemy01Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Vector3.Distance (player.position, this.transform.position) < 12) {
-			if (!GameManager.instance.GameOver && enemy01Health.IsAlive) {
-				nav.SetDestination (player.position);
-				anim.SetBool ("isWalking", true);
-				anim.SetBool ("isIdle", false);
-			}
-		} else if (GameManager.instance.GameOver || !enemy01Health.IsAlive) {
-			anim.SetBool ("isWalking", false);
-			anim.SetBool ("isIdle", true);
-			nav.enabled = false;
-		}
+      if (Vector3.Distance (player.position, this.transform.position) < 12) {
+        if (!GameManager.instance.GameOver && enemy01Health.IsAlive) {
+          nav.SetDestination (player.position);
+          anim.SetBool ("isWalking", true);
+          anim.SetBool ("isIdle", false);
+        }else if (GameManager.instance.GameOver || !enemy01Health.IsAlive) {
+        anim.SetBool ("isWalking", false);
+        anim.SetBool ("isIdle", true);
+        nav.enabled = false;
+        }
+      }
     }
 }

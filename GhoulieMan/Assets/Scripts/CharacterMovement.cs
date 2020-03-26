@@ -18,9 +18,13 @@ public class CharacterMovement : MonoBehaviour
     public Transform knifeSpawn;
     public Rigidbody knifePrefab;
     Rigidbody clone;
+    private AudioSource audio;
+    public AudioClip jumpAudio;
+    public AudioClip projectileAudio;
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody> ();
         anim = GetComponent<Animator>();
         groundCheck = GameObject.Find ("GroundCheck").transform;
@@ -35,6 +39,7 @@ public class CharacterMovement : MonoBehaviour
         if (grounded && Input.GetButtonDown ("Jump")){
             anim.SetTrigger("isJumping");
             rigidbody.AddForce (new Vector2 (0, jumpSpeed));
+            audio.PlayOneShot (jumpAudio);
         }
     }
 
@@ -67,5 +72,6 @@ public class CharacterMovement : MonoBehaviour
     public void CallFireProjectile(){
         clone = Instantiate (knifePrefab, knifeSpawn.position, knifeSpawn.rotation) as Rigidbody;
         clone.AddForce (knifeSpawn.transform.right * knifeSpeed);
+        audio.PlayOneShot (projectileAudio);
     }
 }

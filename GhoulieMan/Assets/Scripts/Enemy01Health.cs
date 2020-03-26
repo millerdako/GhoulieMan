@@ -18,6 +18,9 @@ public class Enemy01Health : MonoBehaviour
     private CapsuleCollider capsuleCollider;
     private bool dissapearEnemy = false;
     private BoxCollider weaponCollider;
+    private AudioSource audio;
+    public AudioClip hurtEnemyAudio;
+    public AudioClip dieEnemyAudio;
 
     public bool IsAlive {
         get {return isAlive;}
@@ -25,6 +28,7 @@ public class Enemy01Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         weaponCollider = GetComponentInChildren<BoxCollider>();
         rigidbody = GetComponent <Rigidbody> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
@@ -56,6 +60,7 @@ public class Enemy01Health : MonoBehaviour
         if(currentHealth > 0){
             anim.Play ("Hurt");
             currentHealth -= 10;
+            audio.PlayOneShot (hurtEnemyAudio);
         }
 
         if (currentHealth <= 0){
@@ -71,6 +76,7 @@ public class Enemy01Health : MonoBehaviour
         rigidbody.isKinematic = true;
         weaponCollider.enabled = false;
         StartCoroutine(removeEnemy());
+        audio.PlayOneShot (dieEnemyAudio);
     }
 
     IEnumerator removeEnemy(){
