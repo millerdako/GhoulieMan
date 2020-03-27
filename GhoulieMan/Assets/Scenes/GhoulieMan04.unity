@@ -7122,6 +7122,7 @@ GameObject:
   - component: {fileID: 1682039453}
   - component: {fileID: 1682039452}
   - component: {fileID: 1682039451}
+  - component: {fileID: 1682039454}
   m_Layer: 0
   m_Name: Enemy02
   m_TagString: Untagged
@@ -7194,6 +7195,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1682039454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682039449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec8a3d392ebfb9945b70a28cffec3a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 10
+  timeBetweenAttacks: 1
+  arrowSpeed: 600
+  arrowSpawn: {fileID: 554751053}
+  arrowPrefab: {fileID: 7494979409915552297, guid: 347ab4dd6e17acd4686b2ad7f1384f80,
+    type: 3}
 --- !u!1001 &1694687558
 PrefabInstance:
   m_ObjectHideFlags: 0
