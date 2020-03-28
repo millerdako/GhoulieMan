@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7494979409915552302}
   - component: {fileID: 7494979409915552297}
   - component: {fileID: 7494979409915552296}
+  - component: {fileID: 114998495279971152}
   m_Layer: 0
   m_Name: Arrow_PFB
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,6 +63,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.33, z: 1}
   m_Center: {x: -0.45, y: 0, z: 0}
+--- !u!114 &114998495279971152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494979409915552299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1157685f01d23dd4b8dfef261699d1fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifeSpan: 2
 --- !u!1001 &7494979409589602881
 PrefabInstance:
   m_ObjectHideFlags: 0

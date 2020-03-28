@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Enemy01Atack.cs" />
      <Compile Include="Assets\Scripts\Enemy01Health.cs" />
      <Compile Include="Assets\Scripts\Enemy01Move.cs" />
+     <Compile Include="Assets\Scripts\Enemy02Health.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\KnifeDestruction.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />

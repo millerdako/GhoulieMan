@@ -26,10 +26,15 @@ public class ArcherAttack : MonoBehaviour
     {
         if(Vector3.Distance (transform.position, player.transform.position) < range){
             playerInRange = true;
-            anim.Play ("Attack");
+            anim.SetTrigger ("isAttacking");
         } else {
             playerInRange = false;
         }
         //print ("Plater in Range: " + playerInRange);
+    }
+
+    public void FireArcherProyectile(){
+        clone = Instantiate (arrowPrefab, arrowSpawn.position, arrowSpawn.rotation) as Rigidbody;
+        clone.AddForce (-arrowSpawn.transform.right * arrowSpeed);
     }
 }
