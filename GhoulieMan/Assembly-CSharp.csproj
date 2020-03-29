@@ -59,24 +59,27 @@
      <Compile Include="Assets\Scripts\Enemy01Health.cs" />
      <Compile Include="Assets\Scripts\Enemy01Move.cs" />
      <Compile Include="Assets\Scripts\Enemy02Health.cs" />
+     <Compile Include="Assets\Scripts\Enemy03Atack.cs" />
+     <Compile Include="Assets\Scripts\Enemy03Health.cs" />
+     <Compile Include="Assets\Scripts\Enemy03Move.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\KnifeDestruction.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\SmoothFollow.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -280,7 +283,7 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>E:/MIS TRABAJOS/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/MILLER RUBIO/Programing/UnityWorkSpace/GhoulieMan/GhoulieMan/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.19f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
