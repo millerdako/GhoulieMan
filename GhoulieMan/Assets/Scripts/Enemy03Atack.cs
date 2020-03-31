@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Enemy03Atack : MonoBehaviour
 {
-    [SerializeField] private float range = 3f;
+    [SerializeField] private float range = 8f;
     [SerializeField] private float timeBetweenAttacks = 1f;
-
     private Animator anim;
     private GameObject player;
     private bool playerInRange;
-    private BoxCollider weaponCollider;
+    public float arrowSpeed = 600f;
+    public Transform arrowSpawn;
+    public Rigidbody arrowPrefab;
+    Rigidbody clone;
     private Enemy03Health enemy03Health;
     // Start is called before the first frame update
     void Start()
     {
+        arrowSpawn = GameObject.Find ("ArrowSpawnOrc").transform;
         enemy03Health = GetComponent<Enemy03Health> ();
         anim = GetComponent <Animator>();
         player = GameManager.instance.Player;
-        weaponCollider = GetComponentInChildren <BoxCollider>();
         StartCoroutine(attack());
     }
 
@@ -31,6 +33,12 @@ public class Enemy03Atack : MonoBehaviour
             playerInRange = false;
         }
         //print ("Player in range" + playerInRange);
+    }
+
+    public void FireArcherProyectile(){
+        print("Fire");
+        clone = Instantiate (arrowPrefab, arrowSpawn.position, arrowSpawn.rotation) as Rigidbody;
+        clone.AddForce (-arrowSpawn.transform.right * arrowSpeed);
     }
 
     IEnumerator attack (){

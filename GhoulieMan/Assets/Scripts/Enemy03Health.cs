@@ -17,7 +17,7 @@ public class Enemy03Health : MonoBehaviour
     private Rigidbody rigidbody;
     private CapsuleCollider capsuleCollider;
     private bool dissapearEnemy = false;
-    private BoxCollider weaponCollider;
+    //private BoxCollider weaponCollider;
     private AudioSource audio;
     public AudioClip hurtEnemyAudio;
     public AudioClip dieEnemyAudio;
@@ -29,7 +29,7 @@ public class Enemy03Health : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
-        weaponCollider = GetComponentInChildren<BoxCollider>();
+        //weaponCollider = GetComponentInChildren<BoxCollider>();
         rigidbody = GetComponent <Rigidbody> ();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         nav = GetComponent <NavMeshAgent> ();
@@ -74,7 +74,7 @@ public class Enemy03Health : MonoBehaviour
         nav.enabled = false;
         anim.SetTrigger ("EnemyDie");
         rigidbody.isKinematic = true;
-        weaponCollider.enabled = false;
+        //weaponCollider.enabled = false;
         StartCoroutine(removeEnemy());
         audio.PlayOneShot (dieEnemyAudio);
     }
