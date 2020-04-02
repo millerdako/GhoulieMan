@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/GhoulieMan05.unity
+- path: Assets/Scenes/GhoulieMan06.unity
   isLoaded: 1
   isActive: 1

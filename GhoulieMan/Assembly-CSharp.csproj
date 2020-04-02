@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\Items Scripts\ItemExplode.cs" />
      <Compile Include="Assets\Scripts\Items Scripts\JumpItemScript.cs" />
      <Compile Include="Assets\Scripts\Items Scripts\PowerItemScript.cs" />
+     <Compile Include="Assets\Scripts\PlatformScripts\VMovement.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\KnifeDestruction.cs" />
      <Compile Include="Assets\Scripts\Player Scripts\PlayerHealth.cs" />

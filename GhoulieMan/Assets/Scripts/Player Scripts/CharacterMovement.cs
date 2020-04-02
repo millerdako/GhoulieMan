@@ -83,9 +83,9 @@ public class CharacterMovement : MonoBehaviour
     public IEnumerator JumpingRoutine () {
         print ("pick JumpItem");
         audio.PlayOneShot (pickItem);
-        rigidbody.mass = 0.8f;
+        jumpSpeed = 1000f;
         yield return new WaitForSeconds (10f);
         print ("no more Jumping");
-        rigidbody.mass = 1f;       
+        jumpSpeed = 800f;       
     }
 }
