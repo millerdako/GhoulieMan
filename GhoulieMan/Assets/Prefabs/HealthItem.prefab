@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3847411711527567130}
   - component: {fileID: 3847411711527567131}
   - component: {fileID: 3847411711527567128}
+  - component: {fileID: 114133365177613020}
   m_Layer: 0
   m_Name: HealthItem
   m_TagString: Untagged
@@ -94,7 +95,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.48
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1.4, z: 0}
 --- !u!54 &3847411711527567131
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,3 +124,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0972531fada63459ec47e84b35b732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114133365177613020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3847411711527567129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127b8f8871f660847b7002aeca784fbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupEffect: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}

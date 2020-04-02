@@ -81,4 +81,8 @@ public class PlayerHealth : MonoBehaviour
         healthSlider.value = currentHealth;
         audio.PlayOneShot (pickItem);
     }
+
+    public void InvencibleItem () {
+        audio.PlayOneShot (pickItem);
+    }
 }

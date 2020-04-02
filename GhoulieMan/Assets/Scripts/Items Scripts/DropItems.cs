@@ -20,6 +20,8 @@ public class DropItems : MonoBehaviour
 
     public void Drop () {
         randomInt = Random.Range (0, items.Length);
-        Instantiate (items [randomInt], transform.position, Quaternion.identity);
+        if (items [randomInt] != null){
+            Instantiate (items [randomInt], transform.position, Quaternion.identity);
+        }
     }
 }

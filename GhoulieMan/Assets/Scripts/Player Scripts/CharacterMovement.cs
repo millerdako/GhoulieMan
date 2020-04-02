@@ -21,6 +21,7 @@ public class CharacterMovement : MonoBehaviour
     private AudioSource audio;
     public AudioClip jumpAudio;
     public AudioClip projectileAudio;
+    public AudioClip pickItem;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +74,18 @@ public class CharacterMovement : MonoBehaviour
         clone = Instantiate (knifePrefab, knifeSpawn.position, knifeSpawn.rotation) as Rigidbody;
         clone.AddForce (knifeSpawn.transform.right * knifeSpeed);
         audio.PlayOneShot (projectileAudio);
+    }
+
+    public void PowerUpJump () {
+        StartCoroutine (JumpingRoutine());
+    }
+
+    public IEnumerator JumpingRoutine () {
+        print ("pick JumpItem");
+        audio.PlayOneShot (pickItem);
+        rigidbody.mass = 0.8f;
+        yield return new WaitForSeconds (10f);
+        print ("no more Jumping");
+        rigidbody.mass = 1f;       
     }
 }

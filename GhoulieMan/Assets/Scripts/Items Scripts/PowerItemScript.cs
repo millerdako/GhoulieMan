@@ -10,7 +10,7 @@ public class PowerItemScript : MonoBehaviour
     private PlayerHealth playerHealth;
     private MeshRenderer meshRenderer;
     private ParticleSystem brainParticles;
-    public GameObject pickupEffect;
+    //public GameObject pickupEffect;
     private ItemExplode itemExplode;
     private SphereCollider sphereCollider;
     // Start is called before the first frame update
@@ -42,6 +42,7 @@ public class PowerItemScript : MonoBehaviour
 
     public IEnumerator InvencibleRoutine () {
         print ("pick PowerItem");
+        playerHealth.InvencibleItem ();
         itemExplode.PickUp();
         particleSystem.enableEmission = true;
         playerHealth.enabled = false;
