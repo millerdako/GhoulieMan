@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 84393579401519104, guid: 52c55d349d4e069479cdff2ad652bc72,
         type: 3}
       propertyPath: m_Name
-      value: VMobilePlatform
+      value: VMobilePlatform Variant
       objectReference: {fileID: 0}
     - target: {fileID: 84393579401519165, guid: 52c55d349d4e069479cdff2ad652bc72,
         type: 3}
@@ -70,17 +70,17 @@ PrefabInstance:
     - target: {fileID: 84393579401519165, guid: 52c55d349d4e069479cdff2ad652bc72,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 84393579401519165, guid: 52c55d349d4e069479cdff2ad652bc72,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 84393579401519165, guid: 52c55d349d4e069479cdff2ad652bc72,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.6
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52c55d349d4e069479cdff2ad652bc72, type: 3}
