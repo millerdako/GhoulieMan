@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Items Scripts\HealthItemScript.cs" />
     <Compile Include="Assets\Scripts\Items Scripts\ItemExplode.cs" />
     <Compile Include="Assets\Scripts\Items Scripts\JumpItemScript.cs" />
+    <Compile Include="Assets\Scripts\Items Scripts\LifeItemScript.cs" />
     <Compile Include="Assets\Scripts\Items Scripts\PowerItemScript.cs" />
     <Compile Include="Assets\Scripts\KillBoxScript.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
