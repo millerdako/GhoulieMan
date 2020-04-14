@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
     public AudioClip dieAudio;
     public AudioClip pickItem;
     private ParticleSystem particleSystem;
+    public LevelManager levelManager;
+    public bool isDead;
     
     
 
@@ -29,21 +31,29 @@ public class PlayerHealth : MonoBehaviour
                 currentHealth = value;
         }
     }
+
+    public Slider HealthSlider
+    {
+        get { return healthSlider; }
+    }
     // Start is called before the first frame update
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        levelManager = FindObjectOfType<LevelManager>();
         anim = GetComponent<Animator> ();
         currentHealth = startingHealth;
         characterMovement = GetComponent<CharacterMovement> ();
         particleSystem = GetComponent<ParticleSystem>();
         particleSystem.enableEmission = false;
+        isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
+        PlayerKill();
     }
 
     void OnTriggerEnter (Collider other) {
@@ -90,5 +100,14 @@ public class PlayerHealth : MonoBehaviour
         CurrentHealth = 0;
         healthSlider.value = currentHealth;
         //takeHit ();
+    }
+
+    public void PlayerKill()
+    {
+        if(currentHealth <= 0)
+        {
+            characterMovement.enabled = false;
+            levelManager.RespawnPlayer();
+        }
     }
 }
