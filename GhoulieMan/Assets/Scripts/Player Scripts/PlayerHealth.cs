@@ -75,7 +75,7 @@ public class PlayerHealth : MonoBehaviour
         }
         
         if(currentHealth <= 0){
-            GameManager.instance.PlayerHit (currentHealth);
+            //GameManager.instance.PlayerHit (currentHealth);
             anim.SetTrigger ("isDead");
             characterMovement.enabled = false;
             audio.PlayOneShot (dieAudio);

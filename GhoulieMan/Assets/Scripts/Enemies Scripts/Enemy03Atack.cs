@@ -17,7 +17,7 @@ public class Enemy03Atack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrowSpawn = GameObject.Find ("ArrowSpawnOrc").transform;
+        //arrowSpawn = GameObject.Find ("ArrowSpawnOrc").transform;
         enemy03Health = GetComponent<Enemy03Health> ();
         anim = GetComponent <Animator>();
         player = GameManager.instance.Player;
@@ -37,6 +37,7 @@ public class Enemy03Atack : MonoBehaviour
 
     public void FireArcherProyectile(){
         //print("Fire");
+        //arrowSpawn = GameObject.Find("ArrowSpawnOrc").transform;
         clone = Instantiate (arrowPrefab, arrowSpawn.position, arrowSpawn.rotation) as Rigidbody;
         clone.AddForce (-arrowSpawn.transform.right * arrowSpeed);
     }

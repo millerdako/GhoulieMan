@@ -16,7 +16,7 @@ public class ArcherAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        arrowSpawn = GameObject.Find ("ArrowSpawn").transform;
+        //arrowSpawn = GameObject.Find ("ArrowSpawn").transform;
         anim = GetComponent<Animator> ();
         player = GameManager.instance.Player;
     }
@@ -34,6 +34,7 @@ public class ArcherAttack : MonoBehaviour
     }
 
     public void FireArcherProyectile(){
+        //arrowSpawn = GameObject.Find("ArrowSpawn").transform;
         clone = Instantiate (arrowPrefab, arrowSpawn.position, arrowSpawn.rotation) as Rigidbody;
         clone.AddForce (-arrowSpawn.transform.right * arrowSpeed);
     }
