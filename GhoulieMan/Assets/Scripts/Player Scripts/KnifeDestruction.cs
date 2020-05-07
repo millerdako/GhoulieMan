@@ -34,7 +34,7 @@ public class KnifeDestruction : MonoBehaviour {
             {
                 if (other.gameObject.GetComponent<SphereCollider>() != null)
                 {
-                    if (other.gameObject.GetComponent<SphereCollider>().isTrigger == true)
+                    if (other.gameObject.GetComponent<SphereCollider>().isTrigger == true && other.gameObject.tag != "Weapon" && other.gameObject.tag != "Boss")
                     {
                         //print("No se destruye");
                         destruction = false;

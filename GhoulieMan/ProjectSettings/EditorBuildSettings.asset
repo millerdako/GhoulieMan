@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: ec8d429cdf960f0458087429ca586686
   - enabled: 1
-    path: Assets/Scenes/GhoulieMan06.unity
+    path: Assets/Scenes/GhoulieManLevel1.unity
     guid: 2a6965af967396042ba4eec040a79006
   m_configObjects: {}
