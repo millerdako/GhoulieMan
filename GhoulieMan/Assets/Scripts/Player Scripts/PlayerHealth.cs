@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void takeHit () {
+    public void takeHit () {
         if(currentHealth > 0){
             GameManager.instance.PlayerHit (currentHealth);
             anim.Play ("Hurt");

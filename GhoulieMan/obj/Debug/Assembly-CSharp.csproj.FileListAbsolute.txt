@@ -1,0 +1,2 @@
+E:\MIS TRABAJOS\Programing\UnityWorkSpace\GhoulieMan\GhoulieMan\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+E:\MIS TRABAJOS\Programing\UnityWorkSpace\GhoulieMan\GhoulieMan\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

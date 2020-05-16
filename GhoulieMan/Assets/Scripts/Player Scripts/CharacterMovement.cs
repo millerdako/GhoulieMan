@@ -42,6 +42,10 @@ public class CharacterMovement : MonoBehaviour
             rigidbody.AddForce (new Vector2 (0, jumpSpeed));
             audio.PlayOneShot (jumpAudio);
         }
+
+        if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown(KeyCode.K)){
+            Attack();
+        }
     }
 
     void FixedUpdate (){
@@ -56,9 +60,7 @@ public class CharacterMovement : MonoBehaviour
 
         anim.SetFloat("Speed", Mathf.Abs (moveDirection));
 
-        if (Input.GetButtonDown ("Fire1")){
-            Attack();
-        }
+        
     }
 
     void Flip (){
@@ -81,11 +83,11 @@ public class CharacterMovement : MonoBehaviour
     }
 
     public IEnumerator JumpingRoutine () {
-        print ("pick JumpItem");
+        //print ("pick JumpItem");
         audio.PlayOneShot (pickItem);
         jumpSpeed = 1000f;
         yield return new WaitForSeconds (10f);
-        print ("no more Jumping");
+        //print ("no more Jumping");
         jumpSpeed = 800f;       
     }
 }

@@ -13,7 +13,7 @@ public class BossController : MonoBehaviour
     public float idleWaitTime = 10.0f;
     private BossHealth bossHealth;
     public float attackTimer = 0.0f;
-    public float attackWaitTime = 2.0f;
+    public float attackWaitTime = 4.0f;
     private BoxCollider swordTrigger;
     public GameObject bossHealthBar;
     private SmoothFollow smoothFollow;
@@ -45,6 +45,7 @@ public class BossController : MonoBehaviour
             //print("Boss is awake!");
             anim.SetBool("bossAwake", true);
             bossHealthBar.SetActive(true);
+            bossHealth.ChangeMaterial();
 
             if (inBattle)
             {
@@ -58,7 +59,19 @@ public class BossController : MonoBehaviour
                     attackTimer += Time.deltaTime;
                     if(attackTimer>= attackWaitTime)
                     {
-                        BossAttack1();
+                        switch (Random.Range(0, 3))
+                        {
+                            case 0:
+                                BossAttack1();
+                                break;
+                            case 1:
+                                BossAttack2();
+                                break;
+                            case 2:
+                                BossAttack3();
+                                break;
+                            default: break;
+                        }
                     }
                 }
                 if(idleTimer >= idleWaitTime)
@@ -68,13 +81,43 @@ public class BossController : MonoBehaviour
                     idleTimer = 0.0f;
                 }
             }
+            else
+            {
+                idleTimer = 0.0f;
+            }
+
+            if (bossHealth.bossHealth > 0 && playerHealth.CurrentHealth > 0)
+            {
+                particleSystem.startSpeed = 6.3f;
+                particleSystem.startSize = 0.37f;
+                if (bossHealth.bossHealth > 15)
+                {
+                    attackWaitTime = 4.0f;
+                }
+                if (bossHealth.bossHealth > 10 && bossHealth.bossHealth < 16)
+                {
+                    attackWaitTime = 3.0f;
+                }
+                if (bossHealth.bossHealth > 5 && bossHealth.bossHealth < 11)
+                {
+                    attackWaitTime = 2.0f;
+                    particleSystem.startSpeed = 8f;
+                }
+                if (bossHealth.bossHealth >= 1 && bossHealth.bossHealth < 6)
+                {
+                    attackWaitTime = 1.0f;
+                    particleSystem.startSpeed = 10f;
+                    particleSystem.startSize = 0.5f;
+                }
+            }
+
         }
         BossReset();
     }
 
     void BossReset()
     {
-        if (playerHealth.CurrentHealth <= 0)
+        if (playerHealth.CurrentHealth == 0)
         {
             bossAwake = false;
             bossCheckPoint.isTrigger = true;
@@ -83,6 +126,7 @@ public class BossController : MonoBehaviour
             anim.Play("BossIdle");
             anim.SetBool("bossAwake", false);
             bossHealth.bossHealth = 20;
+            bossHealthBar.SetActive(false);
         }
     }
 
@@ -118,13 +162,9 @@ public class BossController : MonoBehaviour
     IEnumerator FallingRocks()
     {
         yield return new WaitForSeconds(2);
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         particleSystem.enableEmission = true;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         particleSystem.Play();
         yield return new WaitForSeconds(3);
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         particleSystem.enableEmission = false;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
     }
 }
